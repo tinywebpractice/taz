@@ -387,6 +387,18 @@ body {
   transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease);
 }
 
+.link--featured {
+  grid-column: 1 / -1;
+  width: min(100%, 420px);
+  justify-self: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.link--featured .link__body {
+  justify-items: center;
+}
+
 .link:hover {
   transform: translateY(-4px);
   background: rgba(0, 0, 0, 0.22);
@@ -399,9 +411,16 @@ body {
   border-radius: 999px;
   display: grid;
   place-items: center;
+  overflow: visible;
   border: 1px solid var(--stroke-soft);
   background: rgba(0, 0, 0, 0.18);
   flex: 0 0 auto;
+}
+
+.link__icon svg {
+  display: block;
+  width: 14px;
+  height: 14px;
 }
 
 .link__body {
